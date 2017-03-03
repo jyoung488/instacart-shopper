@@ -4,7 +4,15 @@ class ApplicantsController < ApplicationController
   end
 
   def create
+    p params
     @applicant = Applicant.new(applicant_params.merge(workflow_state: 'applied'))
+
+    if @applicant.save
+      redirect_to @applicant
+    else
+      flash[:notice] = "Something went wrong! Did you fill out all fields?"
+      render :new
+    end
   end
 
   def update
