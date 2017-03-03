@@ -8,7 +8,7 @@ class ApplicantsController < ApplicationController
   end
 
   def update
-    # your code here
+
   end
 
   def show
