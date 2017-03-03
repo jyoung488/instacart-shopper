@@ -19273,3 +19273,250 @@ NoMethodError - undefined method `humanize' for :applied:Symbol:
 
 
 Started POST "/__better_errors/7b1509e48f5fd23c/variables" for ::1 at 2017-03-03 14:26:24 -0800
+
+
+Started GET "/funnels?start_date=2014-12-01&end_date=2014-12-31" for ::1 at 2017-03-03 14:39:35 -0800
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting '}'
+        values: v
+              ^:
+  app/controllers/funnels_controller.rb:49:in `'
+  activesupport (4.2.0) lib/active_support/dependencies.rb:457:in `block in load_file'
+  activesupport (4.2.0) lib/active_support/dependencies.rb:647:in `new_constants_in'
+  activesupport (4.2.0) lib/active_support/dependencies.rb:456:in `load_file'
+  activesupport (4.2.0) lib/active_support/dependencies.rb:354:in `require_or_load'
+  activesupport (4.2.0) lib/active_support/dependencies.rb:494:in `load_missing_constant'
+  activesupport (4.2.0) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.2.0) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.0) lib/active_support/inflector/methods.rb:259:in `constantize'
+  activesupport (4.2.0) lib/active_support/dependencies.rb:566:in `get'
+  activesupport (4.2.0) lib/active_support/dependencies.rb:597:in `constantize'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:59:in `controller'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:38:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.5) lib/rack/etag.rb:24:in `call'
+  rack (1.6.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.5) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jenniferyoung/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/jenniferyoung/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/jenniferyoung/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/dfcce5b2ba3a7b59/variables" for ::1 at 2017-03-03 14:39:36 -0800
+
+
+Started GET "/funnels?start_date=2014-12-01&end_date=2014-12-31" for ::1 at 2017-03-03 14:39:45 -0800
+Processing by FunnelsController#index as HTML
+  Parameters: {"start_date"=>"2014-12-01", "end_date"=>"2014-12-31"}
+  [1m[35m (163.5ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-01' AND '2014-12-08')
+  [1m[36m (140.7ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-01' AND '2014-12-08') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "quiz_started"]]
+  [1m[35m (146.3ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-01' AND '2014-12-08') AND "applicants"."workflow_state" = ?  [["workflow_state", "quiz_completed"]]
+  [1m[36m (143.6ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-01' AND '2014-12-08') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "onboarding_requested"]]
+  [1m[35m (144.5ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-01' AND '2014-12-08') AND "applicants"."workflow_state" = ?  [["workflow_state", "onboarding_completed"]]
+  [1m[36m (144.3ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-01' AND '2014-12-08') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "hired"]]
+  [1m[35m (141.6ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-01' AND '2014-12-08') AND "applicants"."workflow_state" = ?  [["workflow_state", "rejected"]]
+  [1m[36m (139.3ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-09' AND '2014-12-16')[0m
+  [1m[35m (139.0ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-09' AND '2014-12-16') AND "applicants"."workflow_state" = ?  [["workflow_state", "quiz_started"]]
+  [1m[36m (135.2ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-09' AND '2014-12-16') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "quiz_completed"]]
+  [1m[35m (143.2ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-09' AND '2014-12-16') AND "applicants"."workflow_state" = ?  [["workflow_state", "onboarding_requested"]]
+  [1m[36m (146.1ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-09' AND '2014-12-16') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "onboarding_completed"]]
+  [1m[35m (145.3ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-09' AND '2014-12-16') AND "applicants"."workflow_state" = ?  [["workflow_state", "hired"]]
+  [1m[36m (143.9ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-09' AND '2014-12-16') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "rejected"]]
+  [1m[35m (138.8ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-17' AND '2014-12-24')
+  [1m[36m (137.9ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-17' AND '2014-12-24') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "quiz_started"]]
+  [1m[35m (136.8ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-17' AND '2014-12-24') AND "applicants"."workflow_state" = ?  [["workflow_state", "quiz_completed"]]
+  [1m[36m (139.4ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-17' AND '2014-12-24') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "onboarding_requested"]]
+  [1m[35m (137.2ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-17' AND '2014-12-24') AND "applicants"."workflow_state" = ?  [["workflow_state", "onboarding_completed"]]
+  [1m[36m (141.5ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-17' AND '2014-12-24') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "hired"]]
+  [1m[35m (138.7ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-17' AND '2014-12-24') AND "applicants"."workflow_state" = ?  [["workflow_state", "rejected"]]
+  [1m[36m (134.2ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-25' AND '2015-01-01')[0m
+  [1m[35m (135.2ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-25' AND '2015-01-01') AND "applicants"."workflow_state" = ?  [["workflow_state", "quiz_started"]]
+  [1m[36m (140.0ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-25' AND '2015-01-01') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "quiz_completed"]]
+  [1m[35m (137.8ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-25' AND '2015-01-01') AND "applicants"."workflow_state" = ?  [["workflow_state", "onboarding_requested"]]
+  [1m[36m (133.5ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-25' AND '2015-01-01') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "onboarding_completed"]]
+  [1m[35m (134.1ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-25' AND '2015-01-01') AND "applicants"."workflow_state" = ?  [["workflow_state", "hired"]]
+  [1m[36m (131.2ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-25' AND '2015-01-01') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "rejected"]]
+  Rendered funnels/index.html.haml within layouts/application (243.5ms)
+  Rendered layouts/_navigation_links.html.haml (0.2ms)
+  Rendered layouts/_navigation.html.haml (2.0ms)
+  Rendered layouts/_messages.html.haml (0.4ms)
+Completed 200 OK in 4317ms (Views: 348.3ms | ActiveRecord: 3933.2ms)
+
+
+Started GET "/funnels?start_date=2014-12-01&end_date=2014-12-31" for ::1 at 2017-03-03 14:41:38 -0800
+Processing by FunnelsController#index as HTML
+  Parameters: {"start_date"=>"2014-12-01", "end_date"=>"2014-12-31"}
+  [1m[35mApplicant Load (447.8ms)[0m  SELECT "applicants".* FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-25' AND '2015-01-01')
+Completed 500 Internal Server Error in 921ms
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/controllers/funnels_controller.rb:43:in `block in formatted_funnel'
+  activerecord (4.2.0) lib/active_record/relation/delegation.rb:46:in `each'
+  app/controllers/funnels_controller.rb:42:in `formatted_funnel'
+  app/controllers/funnels_controller.rb:31:in `block (2 levels) in index'
+  actionpack (4.2.0) lib/action_controller/metal/mime_responds.rb:216:in `respond_to'
+  app/controllers/funnels_controller.rb:30:in `index'
+  actionpack (4.2.0) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:234:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:169:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.5) lib/rack/etag.rb:24:in `call'
+  rack (1.6.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.5) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jenniferyoung/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/jenniferyoung/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/jenniferyoung/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/ac5a7ded594d288a/variables" for ::1 at 2017-03-03 14:41:39 -0800
+
+
+Started GET "/funnels?start_date=2014-12-01&end_date=2014-12-31" for ::1 at 2017-03-03 14:41:46 -0800
+Processing by FunnelsController#index as HTML
+  Parameters: {"start_date"=>"2014-12-01", "end_date"=>"2014-12-31"}
+  [1m[36m (176.9ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-01' AND '2014-12-08')[0m
+  [1m[35m (149.6ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-01' AND '2014-12-08') AND "applicants"."workflow_state" = ?  [["workflow_state", "quiz_started"]]
+  [1m[36m (183.8ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-01' AND '2014-12-08') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "quiz_completed"]]
+  [1m[35m (142.8ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-01' AND '2014-12-08') AND "applicants"."workflow_state" = ?  [["workflow_state", "onboarding_requested"]]
+  [1m[36m (149.9ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-01' AND '2014-12-08') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "onboarding_completed"]]
+  [1m[35m (147.2ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-01' AND '2014-12-08') AND "applicants"."workflow_state" = ?  [["workflow_state", "hired"]]
+  [1m[36m (146.4ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-01' AND '2014-12-08') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "rejected"]]
+  [1m[35m (140.4ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-09' AND '2014-12-16')
+  [1m[36m (150.0ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-09' AND '2014-12-16') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "quiz_started"]]
+  [1m[35m (146.6ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-09' AND '2014-12-16') AND "applicants"."workflow_state" = ?  [["workflow_state", "quiz_completed"]]
+  [1m[36m (141.6ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-09' AND '2014-12-16') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "onboarding_requested"]]
+  [1m[35m (139.1ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-09' AND '2014-12-16') AND "applicants"."workflow_state" = ?  [["workflow_state", "onboarding_completed"]]
+  [1m[36m (144.9ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-09' AND '2014-12-16') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "hired"]]
+  [1m[35m (151.4ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-09' AND '2014-12-16') AND "applicants"."workflow_state" = ?  [["workflow_state", "rejected"]]
+  [1m[36m (134.9ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-17' AND '2014-12-24')[0m
+  [1m[35m (137.9ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-17' AND '2014-12-24') AND "applicants"."workflow_state" = ?  [["workflow_state", "quiz_started"]]
+  [1m[36m (145.4ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-17' AND '2014-12-24') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "quiz_completed"]]
+  [1m[35m (136.8ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-17' AND '2014-12-24') AND "applicants"."workflow_state" = ?  [["workflow_state", "onboarding_requested"]]
+  [1m[36m (139.0ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-17' AND '2014-12-24') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "onboarding_completed"]]
+  [1m[35m (139.1ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-17' AND '2014-12-24') AND "applicants"."workflow_state" = ?  [["workflow_state", "hired"]]
+  [1m[36m (140.9ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-17' AND '2014-12-24') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "rejected"]]
+  [1m[35m (131.9ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-25' AND '2015-01-01')
+  [1m[36m (135.7ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-25' AND '2015-01-01') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "quiz_started"]]
+  [1m[35m (132.7ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-25' AND '2015-01-01') AND "applicants"."workflow_state" = ?  [["workflow_state", "quiz_completed"]]
+  [1m[36m (132.9ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-25' AND '2015-01-01') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "onboarding_requested"]]
+  [1m[35m (134.6ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-25' AND '2015-01-01') AND "applicants"."workflow_state" = ?  [["workflow_state", "onboarding_completed"]]
+  [1m[36m (130.1ms)[0m  [1mSELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-25' AND '2015-01-01') AND "applicants"."workflow_state" = ?[0m  [["workflow_state", "hired"]]
+  [1m[35m (132.5ms)[0m  SELECT COUNT(*) FROM "applicants" WHERE ("applicants"."created_at" BETWEEN '2014-12-25' AND '2015-01-01') AND "applicants"."workflow_state" = ?  [["workflow_state", "rejected"]]
+  Rendered funnels/index.html.haml within layouts/application (344.3ms)
+  Rendered layouts/_navigation_links.html.haml (0.2ms)
+  Rendered layouts/_navigation.html.haml (2.4ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 4487ms (Views: 436.1ms | ActiveRecord: 4015.4ms)
