@@ -1,0 +1,7 @@
+%h1
+  Tell us about yourself!
+
+= form_for applicant do |f|
+  = f.text_field :first_name, placeholder: "First Name"
+  %br
+  = f.text_field :last_name, placeholder: "Last Name"

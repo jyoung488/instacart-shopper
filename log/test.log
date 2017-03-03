@@ -1,0 +1,56 @@
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "applicants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "region" varchar, "phone" varchar, "email" varchar, "phone_type" varchar, "source" varchar, "over_21" boolean, "reason" text, "workflow_state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150108011628')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------
+ApplicantTest: test_should_be_valid
+-----------------------------------
+  [1m[36mApplicant Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = 'sample@email.com' LIMIT 1[0m
+  [1m[35mApplicant Exists (0.1ms)[0m  SELECT  1 AS one FROM "applicants" WHERE "applicants"."phone" = '555-555-5555' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+ApplicantTest: test_email_should_be_present
+-------------------------------------------
+  [1m[36mApplicant Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = '' LIMIT 1[0m
+  [1m[35mApplicant Exists (0.0ms)[0m  SELECT  1 AS one FROM "applicants" WHERE "applicants"."phone" = '555-555-5555' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------
+ApplicantTest: test_first_name_should_be_present
+------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------
+ApplicantTest: test_should_be_valid
+-----------------------------------
+  [1m[36mApplicant Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = 'sample@email.com' LIMIT 1[0m
+  [1m[35mApplicant Exists (0.0ms)[0m  SELECT  1 AS one FROM "applicants" WHERE "applicants"."phone" = '555-555-5555' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+ApplicantTest: test_email_should_be_present
+-------------------------------------------
+  [1m[36mApplicant Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = '' LIMIT 1[0m
+  [1m[35mApplicant Exists (0.1ms)[0m  SELECT  1 AS one FROM "applicants" WHERE "applicants"."phone" = '555-555-5555' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------
+ApplicantTest: test_should_be_valid
+-----------------------------------
+  [1m[36mApplicant Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = 'sample@email.com' LIMIT 1[0m
+  [1m[35mApplicant Exists (0.0ms)[0m  SELECT  1 AS one FROM "applicants" WHERE "applicants"."phone" = '555-555-5555' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------
+ApplicantTest: test_first_name_should_be_present
+------------------------------------------------
+  [1m[36mApplicant Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "applicants" WHERE "applicants"."email" = 'sample@email.com' LIMIT 1[0m
+  [1m[35mApplicant Exists (0.1ms)[0m  SELECT  1 AS one FROM "applicants" WHERE "applicants"."phone" = '555-555-5555' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
