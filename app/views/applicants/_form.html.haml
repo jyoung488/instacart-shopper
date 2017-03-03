@@ -16,5 +16,7 @@
       %br
       = f.select :region, ['Select Region', 'San Francisco Bay Area', 'Chicago', 'Boston', 'NYC', 'Toronto', 'Berlin', 'Delhi']
       %br
+      = f.label "Confirm you are over 21:"
+      = f.check_box :over_21
+      %br
       = f.submit
-      
