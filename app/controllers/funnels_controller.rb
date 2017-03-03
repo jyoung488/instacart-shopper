@@ -29,7 +29,6 @@ class FunnelsController < ApplicationController
       format.html { @chart_funnel = formatted_funnel }
       format.json { render json: @funnel }
     end
-    p @funnel
   end
 
   private
@@ -46,7 +45,7 @@ class FunnelsController < ApplicationController
 
     formatted.map do |k, v|
       {
-        key: k 
+        key: k
         values: v
       }
     end
