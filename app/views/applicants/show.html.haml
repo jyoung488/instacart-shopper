@@ -1,0 +1,26 @@
+%h3
+  Welcome back,
+  = @applicant.first_name
+
+.row
+  .text-center
+    %p
+      %strong
+        First Name:
+      = @applicant.first_name
+    %p
+      %strong
+        Last Name:
+      = @applicant.last_name
+    %p
+      %strong
+        Phone Number:
+      = @applicant.phone
+    %p
+      %strong
+        Region:
+      = @applicant.region
+
+.row
+  .text-center
+    = link_to 'Edit Application', edit_applicant_path(@applicant), class: 'btn btn-primary'

@@ -4,7 +4,6 @@ class ApplicantsController < ApplicationController
   end
 
   def create
-    p params
     @applicant = Applicant.new(applicant_params.merge(workflow_state: 'applied'))
 
     if @applicant.save
@@ -15,12 +14,16 @@ class ApplicantsController < ApplicationController
     end
   end
 
+  def edit
+    @applicant = Applicant.find_by(id: params[:id])
+  end
+
   def update
 
   end
 
   def show
-    # your code here
+    @applicant = Applicant.find_by(id: params[:id])
   end
 
   private

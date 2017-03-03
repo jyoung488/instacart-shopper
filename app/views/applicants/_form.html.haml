@@ -1,22 +1,31 @@
-%h3
-  Tell us about yourself!
-
 .row
   .col-xs-4
     = form_for applicant do |f|
-      = f.text_field :first_name, placeholder: "First Name", class: 'form-control'
+      = f.label 'First Name'
       %br
-      = f.text_field :last_name, placeholder: "Last Name", class: 'form-control'
+      = f.text_field :first_name, class: 'form-control'
+      %br
+      = f.label 'Last Name'
+      %br
+      = f.text_field :last_name, class: 'form-control'
+      %br
+      = f.label 'Email'
       %br
       = f.text_field :email, placeholder: "Email", class: 'form-control'
       %br
+      = f.label 'Phone Number'
+      %br
       = f.telephone_field :phone, placeholder: "Phone Number", class: 'form-control'
+      %br
+      = f.label 'Phone Type'
       %br
       = f.select :phone_type, ['Select Phone Type', 'iPhone 6/6 Plus', 'iPhone 6s/6s Plus', 'iPhone 5/5S', 'iPhone 4/4S', 'iPhone 3G/3GS', 'Android 4.0+ (less than 2 years old)', 'Android 2.2/2.3 (over 2 years old)', 'Windows Phone', 'Blackberry', 'Other']
       %br
+      = f.label 'Region'
+      %br
       = f.select :region, ['Select Region', 'San Francisco Bay Area', 'Chicago', 'Boston', 'NYC', 'Toronto', 'Berlin', 'Delhi']
       %br
-      = f.label "Confirm you are over 21:"
+      = f.label "I am over 21:"
       = f.check_box :over_21
       %br
       = f.submit
