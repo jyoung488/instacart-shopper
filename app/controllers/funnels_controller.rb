@@ -1,11 +1,35 @@
 class FunnelsController < ApplicationController
   def index
-    @funnel = {} # your code goes here
+    start_date = Date.parse(params[:start_date])
+    end_date = Date.parse(params[:end_date])
+
+    @funnel = {}
+
+    until start_date >= end_date
+
+      range = start_date..(start_date + 1.week)
+
+      applicants = Applicant.where(:created_at => start_date..(start_date + 1.week))
+
+      @funnel[range.to_s] = {
+        "applied": applicants.size,
+        "quiz_started": applicants.where(workflow_state: 'quiz_started').size,
+        "quiz_completed": applicants.where(workflow_state: 'quiz_completed').size,
+        "onboarding_requested": applicants.where(workflow_state: 'onboarding_requested').size,
+        "onboarding_completed": applicants.where(workflow_state: 'onboarding_completed').size,
+        "hired": applicants.where(workflow_state: 'hired').size,
+        "rejected": applicants.where(workflow_state: 'rejected').size
+      }
+
+      start_date = start_date + 1.week + 1.day
+    end
+
 
     respond_to do |format|
       format.html { @chart_funnel = formatted_funnel }
       format.json { render json: @funnel }
     end
+    p @funnel
   end
 
   private
@@ -22,7 +46,7 @@ class FunnelsController < ApplicationController
 
     formatted.map do |k, v|
       {
-        key: k.humanize,
+        key: k
         values: v
       }
     end
