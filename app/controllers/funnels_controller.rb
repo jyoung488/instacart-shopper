@@ -46,7 +46,7 @@ class FunnelsController < ApplicationController
 
     formatted.map do |k, v|
       {
-        key: k
+        key: k 
         values: v
       }
     end
