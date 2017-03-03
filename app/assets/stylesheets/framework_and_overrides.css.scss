@@ -10,12 +10,15 @@ img {
 }
 
 .navbar-brand {
-  //font-size: inherit;
+  color: #fff;
+}
+
+.navbar {
+  background: rgba(255,255,255,0.3);
 }
 
 main {
   @extend .container;
-  background-color: #fff;
   padding-bottom: 80px;
   width: 100%;
   margin-top: 51px;
@@ -24,4 +27,30 @@ main {
 section {
   @extend .row;
   margin-top: 20px;
+}
+
+body {
+  background-image: url(carrots.jpg);
+  color: #fff;
+}
+
+.navbar-brand > a {
+  color: #fff;
+}
+
+.homepage-container {
+  width: 80%;
+  height: 20%;
+  margin: auto;
+  position: absolute;
+  top: 5px; left: 0; bottom: 0; right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid white;
+  background: rgba(255,255,255,0.3);
+}
+
+.large-container {
+  padding-left: 30%;
+  height: 78%;
 }
