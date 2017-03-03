@@ -1,0 +1,39 @@
+- # feel free to override any and all parts of this to make it more to your liking
+- # this is a very bare-bones implementation of a funnel analytics view
+
+.container
+  .row
+    #funnel-chart
+      %svg
+
+  .row
+    %table.table
+      %thead
+        %tr
+          %th
+
+          - Applicant::WORKFLOW_STATES.each do |state|
+            %th= state.humanize
+      %tbody
+        - @funnel.each do |date, state_counts|
+          %tr
+            %td= date
+            - Applicant::WORKFLOW_STATES.each do |state|
+              %td= state_counts[state]
+
+:coffeescript
+  data = #{@chart_funnel.to_json};
+
+  nv.addGraph ->
+    chart = nv.models.multiBarChart()
+      .x((d) -> d.label)
+      .y((d) -> d.value)
+      .margin(top: 50, right: 20, bottom: 50, left: 100)
+      .tooltips(true)
+      .transitionDuration(350)
+
+    chart.yAxis.tickFormat(d3.format(',.2f'))
+    d3.select('#funnel-chart svg').datum(data).call(chart)
+    nv.utils.windowResize(chart.update)
+
+    chart

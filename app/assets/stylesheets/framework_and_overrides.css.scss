@@ -1,0 +1,27 @@
+// import the CSS framework
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "nvd3";
+
+// make all images responsive by default
+img {
+  @extend .img-responsive;
+  margin: 0 auto;
+}
+
+.navbar-brand {
+  //font-size: inherit;
+}
+
+main {
+  @extend .container;
+  background-color: #fff;
+  padding-bottom: 80px;
+  width: 100%;
+  margin-top: 51px;
+}
+
+section {
+  @extend .row;
+  margin-top: 20px;
+}
